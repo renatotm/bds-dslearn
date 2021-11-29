@@ -33,7 +33,7 @@ public class Enrollment {
 	@ManyToMany(mappedBy = "enrollmentsDone")
 	private Set<Lesson> lessonsDone = new HashSet<>();
 	
-	@OneToMany(mappedBy = "enrollment")
+	@OneToMany(mappedBy = "enrollment") // enrollment com varios deliverys
 	private List<Deliver> deliveries = new ArrayList<>();
 	
 	public Enrollment() {

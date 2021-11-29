@@ -35,10 +35,10 @@ public class Offer implements Serializable {
 	@JoinColumn(name = "course_id")
 	private Course course;
 	
-	@OneToMany(mappedBy = "offer")
+	@OneToMany(mappedBy = "offer") //  uma oferta varios recursos
 	private List<Resource> resources = new ArrayList<>();
 	
-	@OneToMany(mappedBy = "offer")
+	@OneToMany(mappedBy = "offer") // uma oferta varios topicos -- offer = atributo na classe topic
 	private List<Topic> topics = new ArrayList<>();	
 	
 	public Offer() {
